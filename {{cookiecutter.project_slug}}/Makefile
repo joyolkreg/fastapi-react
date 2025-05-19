@@ -1,13 +1,12 @@
-
-.PHONY: start
-start:
-	docker compose up -d
-
 .PHONY: build
 build:
 	set -e; \
 	docker compose pull; \
 	docker compose build
+
+.PHONY: start
+start:
+	docker compose up -d
 
 apply: apply
 	set -e; \
