@@ -8,6 +8,7 @@ build:
 start:
 	docker compose up -d
 
+.PHONY: apply
 apply: apply
 	set -e; \
 	docker compose restart; \
@@ -23,4 +24,5 @@ initialize:
 log:
 	docker compose logs -f
 
+.PHONY: all
 all: build start apply log
