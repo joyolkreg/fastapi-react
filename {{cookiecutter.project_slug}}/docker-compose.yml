@@ -30,11 +30,11 @@ services:
     build:
       context: backend
       dockerfile: Dockerfile
-    command: celery --app app.tasks worker --loglevel=DEBUG -Q main-queue -c 1
+    command: celery --app app.tasks worker --loglevel=DEBUG -Q main-queue -c 1 --task-events
 
   flower:  
     image: mher/flower
-    command: celery flower --broker=redis://redis:6379/0 --port=5555
+    command: celery --broker=redis://redis:6379/0 flower --port=5555 --enable_events=False
     ports:  
         - 5555:5555
     depends_on:
