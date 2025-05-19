@@ -9,7 +9,7 @@ start:
 	docker compose up -d
 
 .PHONY: apply
-apply: apply
+apply:
 	set -e; \
 	docker compose restart; \
 	docker compose run --rm backend alembic upgrade head
