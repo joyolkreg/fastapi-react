@@ -16,7 +16,7 @@ This will then create a `dev-fastapi-react` directory.
 
 ```bash
 cd dev-fastapi-react
-docker-compose up -d
+docker compose up -d
 ```
 
 When developing locally, there is also a helper script that will create a cookiecutter directory, build containers, and run tests all from within the root project directory. This can be kind of a tedious process with cookiecutter so this makes it somewhat less painful. From the root `fastapi-react` directory, simply run:

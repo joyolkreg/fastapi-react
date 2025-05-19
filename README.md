@@ -97,9 +97,9 @@ First, install cookiecutter if you don't already have it:
 pip3 install cookiecutter
 ```
 
-Second, install docker-compose if you don't already have it:
+Second, install docker compose if you don't already have it:
 
-[docker-compose installation official
+[docker compose installation official
 docs](https://docs.docker.com/compose/install/).
 
 Then, in the directory you want your project to live:
@@ -140,12 +140,12 @@ load the initial data (a test user).
 It may take a while to build the first time it's run since it needs to fetch all
 the docker images.
 
-Once you've built the images once, you can simply use regular `docker-compose`
+Once you've built the images once, you can simply use regular `docker compose`
 commands to manage your development environment, for example to start your
 containers:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 Once this finishes you can navigate to the port set during setup (default is
@@ -375,7 +375,7 @@ certificates, using the ideas from DockerSwarm.rocks.
 
 Please refer to DockerSwarm.rocks to see how to deploy such a cluster easily.
 You will have to change the Traefik examples to Nginx or update your
-docker-compose file.
+docker compose file.
 
 ## Contributing
 
