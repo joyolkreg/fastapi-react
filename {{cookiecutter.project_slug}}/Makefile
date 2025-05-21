@@ -14,8 +14,7 @@ apply:
 	docker compose restart; \
 	docker compose run --rm backend alembic upgrade head
 
-.PHONY: setup
-setup:
+setup: build start apply
 	set -e; \
 	sleep 5s; \
 	docker compose run --rm backend python3 app/initial_data.py
